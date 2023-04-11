@@ -1,11 +1,12 @@
 import './Main.css';
-import useCountStore from '../store/count_store'
+import useCountStore from '../../store/count_store.js'
+import Generator_probability from '../../generator/Generator';
 
 function Main() {
 
   const { count, increaseCount } = useCountStore(state => state);
 
-  let randomnumber = Math.round((Math.random() * 100) * 100) / 100;
+  let randomnumber = Generator_probability();
 
   return (
     <div className="Main">
