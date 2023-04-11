@@ -1,20 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import useStore from './store/store.js'
+import useCountStore from './store/count_store.js'
 
 function App() {
 
-  const { count, increaseCount, removeCount } = useStore(state => state);
+  const { count, increaseCount } = useCountStore(state => state);
+
+  let randomnumber = Math.round((Math.random() * 100) * 100) / 100;
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {count}
+          소모 다이아 {count * 10}
         </p>
-        <button onClick={increaseCount}>increase</button>
-        <button onClick={removeCount}>remove</button>
+        <p>
+          시행 횟수 {count}
+        </p>
+        <p>
+          _Expected_Probability_Value_P : {randomnumber}
+        </p>
+        <button onClick={() => {
+          increaseCount();
+          
+        }}>뽑기!</button>
       </header>
     </div>
   );
