@@ -1,15 +1,16 @@
 import './Main.css';
 import useCountStore from '../../store/count_store.js'
-import Generator_probability from '../../generator/Generator';
-import Judge from '../../judge/Judge';
+import Generator_probability from '../../generator/Generator.js';
+import Judge from '../../judge/Judge.js';
 
 function Main() {
 
   const { count, increaseCount } = useCountStore(state => state);
 
-  let randomnumber = Generator_probability();
+  const randomnumber = Generator_probability();
+  //const randomnumber = 1.92;
 
-  let rarelevel = Judge(randomnumber);
+  const rarelevel = Judge(randomnumber);
 
   return (
     <div className="Main">

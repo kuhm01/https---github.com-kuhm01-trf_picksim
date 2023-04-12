@@ -1,5 +1,5 @@
 function Generator_probability() {
-    let randomnumber = Math.round((Math.random() * 100) * 100) / 100;
+    const randomnumber = Math.round((Math.random() * 100) * 100) / 100;
 
     return randomnumber;
 }
