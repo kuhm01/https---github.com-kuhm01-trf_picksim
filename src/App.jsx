@@ -5,7 +5,15 @@ function App() {
 
   return (
     <div className="App">
-      <Main></Main>
+      <div>
+        
+      </div>
+      <div>
+        <Main></Main>
+      </div>
+      <div>
+
+      </div>
     </div>
   );
 }
