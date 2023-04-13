@@ -1,10 +1,15 @@
-function LegendJudge() {
+function LegendJudge(nonePick, nonePicked, summonPicked) {
     const legend_randomnumber = Math.round(Math.random() * 10);
 
-    if (legend_randomnumber < 5) {
-        return "일반 전설"
+    if (nonePick === 1) {
+        summonPicked();
+        return "픽업 전설";
+    } else if (legend_randomnumber < 5) {
+        nonePicked();
+        return "일반 전설";
     } else {
-        return "픽업 전설"
+        summonPicked();
+        return "픽업 전설";
     }
 }
 
